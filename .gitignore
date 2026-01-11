@@ -1,0 +1,32 @@
+# --- Python 虚拟环境 ---
+# 忽略项目内的虚拟环境文件夹（名称可能是 .venv, venv, env 等）
+.venv/
+venv/
+env/
+ENV/
+
+# --- IDE 和编辑器配置 ---
+# PyCharm 的专属配置目录
+.idea/
+# VS Code 配置
+.vscode/
+# 其他编辑器的临时文件
+*.swp
+.DS_Store
+
+# --- 测试生成的报告和缓存 ---
+# Allure 报告的原始数据（JSON等），每次运行都会变，无需提交
+outputs/reports/allure_raw/
+# Pytest 的缓存，用于快速运行
+.pytest_cache/
+# Python 的字节码缓存目录
+__pycache__/
+*.pyc
+
+# --- 系统文件 ---
+Thumbs.db
+*.log
+
+# --- 项目特定文件（可选）---
+# 如果你有本地配置文件，且其中包含密码等敏感信息，也务必忽略
+# config/local_settings.py

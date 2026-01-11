@@ -1,0 +1,8 @@
+create_post:
+  valid_data:
+    - title:"YAML Data in PyCharm 1"
+    - body:"YAML Body 1"
+    - userId: 10
+    - title:"PyCharm YAML数据2"
+    - body:"PyCharm YAML正文2"
+    - userId: 20
