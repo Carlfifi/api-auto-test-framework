@@ -1,0 +1,30 @@
+name: Python Test CI
+
+# 定义触发事件：推送到仓库或创建拉取请求时运行
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. 获取代码
+    - uses: actions/checkout@v4
+
+    # 2. 设置Python环境
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+
+    # 3. 安装项目依赖
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+
+    # 4. 运行测试并生成Allure数据
+    - name: Run tests with pytest
+      run: |
+        pytest --alluredir=outputs/reports/allure_raw
